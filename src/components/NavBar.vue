@@ -16,7 +16,7 @@
 						<a class="dropdown-item" href="#" v-for="(app, index) in apps" :key="`app-${index}`">{{ app }}</a>
 					</div>
 				</li>
-				<li class="nav-item" style="align-items: center">
+				<li class="nav-item" style="display: flex; align-items: center">
 					<form class="form-inline text-light">
 						<span class="mdi mdi-tab-plus" style="margin-right: 4px;"></span>
 						<b-form-checkbox class="custom-control-input-warning" v-model="samewindow" name="same-window-switch" switch></b-form-checkbox>
@@ -25,12 +25,7 @@
 				</li>
 			</ul>
 			<ul class="navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link pr-0" href="#" role="button">
-						<span class="mdi mdi-message" style="font-size: 18px"></span>
-						<span style="position: relative; left: -6px; top: 6px;" class="badge badge-success">5</span>
-					</a>
-				</li>
+				<frame-message-viewer></frame-message-viewer>
 				<li class="nav-item active dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<span class="mdi mdi-help-circle"></span>
@@ -56,6 +51,8 @@
 </template>
 
 <script>
+	import FrameMessageViewer from './FrameMessageViewer.vue'
+	
 	export default {
 		name: 'NavBar',
 		data: () => {
@@ -71,6 +68,9 @@
 				],
 				samewindow: false
 			}
+		},
+		components: {
+			FrameMessageViewer
 		}
 	}
 </script>
