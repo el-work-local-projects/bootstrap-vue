@@ -18,16 +18,17 @@
 				</li>
 				<li class="nav-item" style="display: flex; align-items: center">
 					<form class="form-inline text-light">
-						<span class="mdi mdi-tab-plus" style="margin-right: 4px;"></span>
+						<span class="mdi mdi-tab-plus" style="margin-right: 4px;" v-b-tooltip.hover.noninteractive title="New Tab"></span>
 						<b-form-checkbox class="custom-control-input-warning" v-model="samewindow" name="same-window-switch" switch></b-form-checkbox>
-						<span class="mdi mdi-tab-unselected"></span>		
+						<span class="mdi mdi-tab-unselected" v-b-tooltip.hover.noninteractive title="Same Tab"></span>		
 					</form>
 				</li>
 			</ul>
 			<ul class="navbar-nav">
 				<frame-message-viewer></frame-message-viewer>
 				<li class="nav-item active dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							v-b-tooltip.hover.noninteractive title="Help">
 						<span class="mdi mdi-help-circle"></span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

@@ -1,5 +1,5 @@
 <template>
-	<li class="nav-item active">
+	<li class="nav-item active" v-b-tooltip.hover.noninteractive title="Messages">
 		<a class="nav-link pr-0" role="button" v-b-modal.frame-message-modal>
 			<span class="mdi mdi-message" style="font-size: 18px"></span>
 			<span style="position: relative; left: -6px; top: 6px;" 
