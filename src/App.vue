@@ -19,10 +19,9 @@ export default {
 }
 </script>
 
-<style>
-	@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+<style lang="scss">
 	@import "../node_modules/@mdi/font/css/materialdesignicons.min.css";
-	@import "../node_modules/bootstrap-vue/dist/bootstrap-vue.min.css";
+	@import "@/styles/global.scss";
 	
 	html {
 		height: 100%;
@@ -30,6 +29,7 @@ export default {
 	
 	body {
 		height: 100%;
+		background-color: gray("200");
 	}
 	
 	#app {
@@ -38,5 +38,9 @@ export default {
 	
 	.app-content {
 		height: calc(100% - 80px);
+	}
+	
+	.custom-control-input-warning .custom-control-input:checked ~ .custom-control-label::before {
+		background: theme-color("warning") linear-gradient(180deg, theme-color-level(warning, -5), theme-color("warning")) repeat-x;
 	}
 </style>

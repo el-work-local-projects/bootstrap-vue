@@ -75,14 +75,6 @@
 	}
 </script>
 
-<style>
-	.custom-control-input-warning .custom-control-input:checked ~ .custom-control-label::before {
-		color: #fff;
-		border-color: #007bff;
-		background-color: orange;
-	}
-</style>
-
 <style scoped>
 	nav {
 		height: 50px;

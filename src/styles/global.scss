@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+$theme-colors: (
+	"primary": #258ED5
+);
+
+$enable-shadows: true;
+$enable-gradients: true;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap-vue/src/index";
