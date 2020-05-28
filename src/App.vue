@@ -1,17 +1,41 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
-	<div class="container-fluid app-content">Content</div>
+	<div class="container-fluid app-content">
+		<form id="selector" class="form-inline mt-1 pb-1 border-bottom border-secondary">
+			<label class="mr-2">Feature:</label>
+			<b-form-select v-model="mode" :options="modeOptions"></b-form-select>
+		</form>
+		<router-view id="selection"></router-view>
+	</div>
 	<FrameFooter></FrameFooter>
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
-import FrameFooter from './components/FrameFooter.vue'
+import NavBar from './components/frame/NavBar.vue'
+import FrameFooter from './components/frame/FrameFooter.vue'
 
 export default {
   name: 'App',
+  data() {
+	return {
+		mode: 'text',
+		modeOptions: [
+			'text',
+			'labels',
+			'buttons',
+			'tables',
+			'component-tables',
+			'forms'
+		]
+	}
+  },
+  watch: {
+	mode() {
+		this.$router.push(this.mode);
+	}
+  },
   components: {
     NavBar,
 	FrameFooter
@@ -38,6 +62,15 @@ export default {
 	
 	.app-content {
 		height: calc(100% - 80px);
+	}
+	
+	#selector {
+		height: 44px;
+	}
+	
+	#selection {
+		height: calc(100% - 44px);
+		overflow: auto;
 	}
 	
 	.custom-control-input-warning .custom-control-input:checked ~ .custom-control-label::before {
