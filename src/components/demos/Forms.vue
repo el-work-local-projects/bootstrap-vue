@@ -18,16 +18,18 @@
 								<input class="form-control" id="disabledInput" type="text" value="Read only input..." readonly>
 							</div>
 							<div class="form-group has-success">
-								<label class="control-label" for="successInput">Success</label>
-								<input class="form-control" id="successInput" type="text" value="Input success">
+								<label for="successInput">Success</label>
+								<input class="form-control is-valid" id="successInput" type="text" value="Input success">
+								<div class="valid-feedback">
+									Input is valid.
+								</div>
 							</div>
-							<div class="form-group has-warning">
-								<label class="control-label" for="warningInput">Warning</label>
-								<input class="form-control" id="warningInput" type="text" value="Input warning">
-							</div>
-							<div class="form-group has-error">
-								<label class="control-label" for="errorInput">Error</label>
-								<input class="form-control" id="errorInput" type="text" value="Input error">
+							<div class="form-group">
+								<label for="errorInput">Error</label>
+								<input class="form-control is-invalid" id="errorInput" type="text" value="Input error">
+								<div class="invalid-feedback">
+									Please provide a valid input.
+								</div>
 							</div>
 							<div class="form-group">
 								<label>Plaintext</label>
@@ -40,40 +42,46 @@
 					<form>
 						<fieldset>
 							<div class="form-group">
-								<label class="control-label" for="largeInput">Large</label>
-								<input class="form-control input-lg" id="largeInput" type="text" value="Large input">
+								<label for="largeInput">Large</label>
+								<input class="form-control form-control-lg" id="largeInput" type="text" value="Large input">
 							</div>
 							<div class="form-group">
-								<label class="control-label" for="defaultInput">Default</label>
+								<label for="defaultInput">Default</label>
 								<input class="form-control" id="defaultInput" type="text" value="Default input">
 							</div>
 							<div class="form-group">
-								<label class="control-label" for="smallInput">Small</label>
-								<input class="form-control input-sm" id="smallInput" type="text" value="Small input">
+								<label for="smallInput">Small</label>
+								<input class="form-control form-control-sm" id="smallInput" type="text" value="Small input">
 							</div>
 							<div class="form-group">
-								<label class="control-label">Input addons</label>
+								<label>Input addons</label>
 								<div class="input-group">
-									<span class="input-group-addon">$</span>
+									<div class="input-group-prepend">
+										<span class="input-group-text">$</span>
+									</div>
 									<input type="text" class="form-control">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">Button</button>
-								</span>
+									<div class="input-group-append">
+										<button class="btn btn-secondary" type="button">Button</button>
+									</div>
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="input-group">
-								<span class="input-group-addon">
-									<input type="radio">
-								</span>
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<input type="radio">
+										</div>
+									</div>
 									<input type="text" class="form-control">
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="input-group">
-								<span class="input-group-addon">
-									<input type="checkbox">
-								</span>
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<input type="checkbox">
+										</div>
+									</div>
 									<input type="text" class="form-control">
 								</div>
 							</div>
@@ -84,36 +92,48 @@
 					<form>
 						<fieldset>
 							<div class="form-group">
-								<label class="control-label" for="passInput">Password</label>
+								<label for="passInput">Password</label>
 								<input class="form-control" id="passInput" type="password" value="hunter2">
 							</div>
 							<div class="form-group">
-								<label class="control-label" for="numInput">Number</label>
+								<label for="numInput">Number</label>
 								<input class="form-control" id="numInput" type="number" value="2548">
 							</div>
 							<div class="form-group">
-								<label class="control-label" for="emailInput">Email</label>
+								<label for="emailInput">Email</label>
 								<input class="form-control" id="emailInput" type="email" value="x@y.com">
 							</div>
 							<div class="form-group">
-								<label class="control-label" for="urlInput">URL</label>
+								<label for="urlInput">URL</label>
 								<input class="form-control" id="urlInput" type="url" value="http://www.place.com">
 							</div>
 							<div class="form-group">
-								<label class="control-label" for="telInput">Tel</label>
+								<label for="telInput">Tel</label>
 								<input class="form-control" id="telInput" type="tel" value="999-555-1234">
 							</div>
 							<div class="form-group">
-								<label class="control-label" for="colorInput">Color</label>
+								<label for="colorInput">Color</label>
 								<input class="form-control" id="colorInput" type="color" value="um">
 							</div>
 							<div class="form-group">
-								<label class="control-label" for="searchInput">Search</label>
+								<label for="searchInput">Search</label>
 								<input class="form-control" id="searchInput" type="search" value="um">
 							</div>
 							<div class="form-group">
-								<label class="control-label">Range</label>
+								<label>Range</label>
 								<input class="form-control-range" type="range">
+							</div>
+							<div class="form-group">
+								<label>Custom Range</label>
+								<input class="custom-range" type="range">
+							</div>
+							<div class="form-group">
+								<label>File</label>
+								<input class="form-control" type="file">
+							</div>
+							<div class="custom-file">
+								<input class="custom-file-input" type="file" id="customFile">
+								<label class="custom-file-label" for="customFile">Custom File</label>
 							</div>
 						</fieldset>
 					</form>
@@ -131,7 +151,7 @@
 					<form>
 						<fieldset>
 							<div class="form-group">
-								<label class="control-label">Textarea</label>
+								<label>Textarea</label>
 								<textarea class="form-control" rows="3"></textarea>
 							</div>
 						</fieldset>
@@ -140,40 +160,52 @@
 				<div class="col-sm-2">
 					<label>Radios</label>
 					<div class="form-check">
-						<input type="radio" class="form-check-input" name="radio">
-						<label class="form-check-label">Radio option 1</label>
+						<input type="radio" class="form-check-input" name="radio" id="radio-1">
+						<label class="form-check-label" for="radio-1">Radio option 1</label>
 					</div>
 					<div class="form-check">
-						<input type="radio" class="form-check-input" name="radio">
-						<label class="form-check-label">Radio option 2</label>
+						<input type="radio" class="form-check-input" name="radio" id="radio-2">
+						<label class="form-check-label" for="radio-2">Radio option 2</label>
 					</div>
 					<div class="form-check">
-						<input type="radio" class="form-check-input" name="radio" disabled>
-						<label class="form-check-label">Disabled Radio</label>
+						<input type="radio" class="form-check-input" name="radio" id="radio-d" disabled>
+						<label class="form-check-label" for="radio-d">Disabled Radio</label>
 					</div>
 				</div>
 				<div class="col-sm-2">
 					<label>Checkboxes</label>
 					<div class="form-check">
-						<input type="checkbox" class="form-check-input">
-						<label class="form-check-label">CB option 1</label>
+						<input type="checkbox" class="form-check-input" id="cb-1">
+						<label class="form-check-label" for="cb-1">CB option 1</label>
 					</div>
 					<div class="form-check">
-						<input type="checkbox" class="form-check-input">
-						<label class="form-check-label">CB option 2</label>
+						<input type="checkbox" class="form-check-input" id="cb-2">
+						<label class="form-check-label" for="cb-2">CB option 2</label>
 					</div>
 					<div class="form-check">
-						<input type="checkbox" class="form-check-input" disabled>
-						<label class="form-check-label">Disabled CB</label>
+						<input type="checkbox" class="form-check-input" disabled id="cb-3">
+						<label class="form-check-label" for="cb-3">Disabled CB</label>
+					</div>
+					<div class="custom-control custom-switch">
+						<input type="checkbox" class="custom-control-input" id="customSwitch1">
+						<label class="custom-control-label" for="customSwitch1">Switch</label>
+					</div>
+					<div class="custom-control custom-switch">
+						<input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
+						<label class="custom-control-label" for="customSwitch2">Disabled switch</label>
 					</div>
 				</div>
 				<div class="col-sm-2">
 					<form>
 						<fieldset>
 							<div class="form-group">
-								<label class="control-label">Select</label>
-								<select class="form-control" ng-options="item.value as item.label for item in selOpts" ng-model="selected">
-									<option v-for="option in options" :key="option"></option>
+								<label>Select</label>
+								<select class="form-control" v-model="selected.select">
+									<option v-for="option in options" :key="option">{{option}}</option>
+								</select>
+								<label>Custom Select</label>
+								<select class="custom-select" v-model="selected.select">
+									<option v-for="option in options" :key="option">{{option}}</option>
 								</select>
 							</div>
 						</fieldset>
@@ -183,8 +215,10 @@
 					<form>
 						<fieldset>
 							<div class="form-group">
-								<label class="control-label">Multiselect</label>
-								<select multiple ng-multiple="true" class="form-control" ng-options="item.value as item.label for item in selOpts" ng-model="selectedMulti"></select>
+								<label>Multiselect</label>
+								<select class="form-control" v-model="selected.multiselect" multiple>
+									<option v-for="option in options" :key="option">{{option}}</option>
+								</select>
 							</div>
 						</fieldset>
 					</form>
@@ -194,80 +228,77 @@
 			<hr/>
 
 			<div class="row">
-				<div class="col-sm-6">
-					<div class="well">
-						<form class="form-horizontal" ng-submit="submit()">
-							<fieldset>
-								<legend>Legend</legend>
-								<div class="form-group">
-									<label for="inputEmail" class="col-sm-2 control-label">Email</label>
-									<div class="col-sm-10">
-										<input type="email" class="form-control" id="inputEmail" placeholder="Email">
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="inputPassword" class="col-sm-2 control-label">Password</label>
-									<div class="col-sm-10">
-										<input type="password" class="form-control" id="inputPassword" placeholder="Password">
-										<div class="checkbox">
-											<label>
-												<input type="checkbox"> Checkbox
-											</label>
+				<div class="col-8">
+					<div class="card">
+						<div class="card-body">
+							<form ng-submit="submit()">
+								<fieldset>
+									<legend>Legend</legend>
+									<div class="form-group row">
+										<label for="inputEmail" class="col-2 control-label">Email</label>
+										<div class="col-10">
+											<input type="email" class="form-control" id="inputEmail" placeholder="Email">
 										</div>
 									</div>
-								</div>
-								<div class="form-group">
-									<label for="textArea" class="col-sm-2 control-label">Textarea</label>
-									<div class="col-sm-10">
-										<textarea class="form-control" rows="3" id="textArea"></textarea>
-										<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">Radios</label>
-									<div class="col-sm-10">
-										<div class="radio">
-											<label>
-												<input type="radio" name="optionsRadios" id="optionsRadio1" value="option1" checked="">
-												Option one is this
-											</label>
-										</div>
-										<div class="radio">
-											<label>
-												<input type="radio" name="optionsRadios" id="optionsRadio2" value="option2">
-												Option two is something else
-											</label>
+									<div class="form-group row">
+										<label for="inputPassword" class="col-sm-2 control-label">Password</label>
+										<div class="col-sm-10">
+											<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+											<div class="form-check">
+												<input type="checkbox" class="form-check-input" id="cb-card">
+												<label class="form-check-label" for="cb-card">Checkbox</label>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="form-group">
-									<label for="select" class="col-sm-2 control-label">Selects</label>
-									<div class="col-sm-10">
-										<select class="form-control" id="select">
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-										</select>
-										<br>
-										<select class="form-control" multiple="">
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-										</select>
+									<div class="form-group row">
+										<label for="textArea" class="col-2 control-label">Textarea</label>
+										<div class="col-10">
+											<textarea class="form-control" rows="3" id="textArea"></textarea>
+											<small class="orm-text text-muted">A longer block of help text that breaks onto a new line and may extend beyond one line.</small>
+										</div>
 									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-10 col-lg-offset-2">
-										<input type="button" class="btn btn-default" value="Reset" onClick="this.form.reset()"/>
-										<input type="submit" class="btn btn-primary" value="Submit"/>
+									<div class="form-group row">
+										<label class="col-2 control-label">Radios</label>
+										<div class="col-10">
+											<div class="form-check">
+												<input type="radio" class="form-check-input" name="radio" id="radio-card-1">
+												<label class="form-check-label" for="radio-card-1">Option one is this</label>
+											</div>
+											<div class="form-check">
+												<input type="radio" class="form-check-input" name="radio" id="radio-card-2">
+												<label class="form-check-label" for="radio-card-2">Option two is something else</label>
+											</div>
+										</div>
 									</div>
-								</div>
-							</fieldset>
-						</form>
+									<div class="form-group row">
+										<label for="select" class="col-sm-2 control-label">Selects</label>
+										<div class="col-sm-10">
+											<select class="form-control" id="select">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+											<br>
+											<select class="form-control" multiple="">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<div class="col-10 offset-2">
+											<input type="button" class="btn btn-secondary" value="Reset" onClick="this.form.reset()"/>
+											<input type="submit" class="btn btn-primary" value="Submit"/>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -280,7 +311,13 @@
 		name: 'FormsView',
 		data() {
 			return {
-				options: ['Option A', 'Option B', 'Option C']
+				options: ['Option A', 'Option B', 'Option C'],
+				selected: {
+					radio: '',
+					checkbox: [],
+					select: '',
+					multiselect: []
+				}
 			}
 		}
 	}

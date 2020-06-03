@@ -27,7 +27,8 @@ export default {
 			'buttons',
 			'tables',
 			'component-tables',
-			'forms'
+			'forms',
+			'component-forms'
 		]
 	}
   },

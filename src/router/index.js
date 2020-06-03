@@ -9,6 +9,7 @@ import Buttons from '../components/demos/Buttons.vue';
 import Tables from '../components/demos/Tables.vue';
 import ComponentTables from '../components/demos/ComponentTables.vue';
 import Forms from '../components/demos/Forms.vue';
+import ComponentForms from '../components/demos/ComponentForms.vue';
 
 export default new VueRouter({
 	routes: [
@@ -46,6 +47,11 @@ export default new VueRouter({
 		path: '/forms',
 		name: 'Forms',
 		component: Forms
+	},
+	{
+		path: '/component-forms',
+		name: 'ComponentForms',
+		component: ComponentForms
 	}
 	]
 });
