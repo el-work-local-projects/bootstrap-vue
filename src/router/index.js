@@ -10,6 +10,12 @@ import Tables from '../components/demos/Tables.vue';
 import ComponentTables from '../components/demos/ComponentTables.vue';
 import Forms from '../components/demos/Forms.vue';
 import ComponentForms from '../components/demos/ComponentForms.vue';
+import Navigation from '../components/demos/Navigation.vue';
+import Alerts from '../components/demos/Alerts.vue';
+import TimeSelection from '../components/demos/TimeSelection.vue';
+import Progress from '../components/demos/Progress.vue';
+import ListGroups from '../components/demos/ListGroups.vue';
+import Dialogs from '../components/demos/Dialogs.vue';
 
 export default new VueRouter({
 	routes: [
@@ -52,6 +58,36 @@ export default new VueRouter({
 		path: '/component-forms',
 		name: 'ComponentForms',
 		component: ComponentForms
+	},
+	{
+		path: '/navigation',
+		name: 'Navigation',
+		component: Navigation
+	},
+	{
+		path: '/alerts',
+		name: 'Alerts',
+		component: Alerts
+	},
+	{
+		path: '/time-selection',
+		name: 'TimeSelection',
+		component: TimeSelection
+	},
+	{
+		path: '/progress',
+		name: 'Progress',
+		component: Progress
+	},
+	{
+		path: '/list-groups',
+		name: 'ListGroups',
+		component: ListGroups
+	},
+	{
+		path: '/dialogs',
+		name: 'Dialogs',
+		component: Dialogs
 	}
 	]
 });

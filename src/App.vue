@@ -28,7 +28,13 @@ export default {
 			'tables',
 			'component-tables',
 			'forms',
-			'component-forms'
+			'component-forms',
+			'navigation',
+			'alerts',
+			'time-selection',
+			'progress',
+			'list-groups',
+			'dialogs'
 		]
 	}
   },
