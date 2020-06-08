@@ -16,6 +16,7 @@ import TimeSelection from '../components/demos/TimeSelection.vue';
 import Progress from '../components/demos/Progress.vue';
 import ListGroups from '../components/demos/ListGroups.vue';
 import Dialogs from '../components/demos/Dialogs.vue';
+import Containers from '../components/demos/Containers.vue';
 
 export default new VueRouter({
 	routes: [
@@ -88,6 +89,11 @@ export default new VueRouter({
 		path: '/dialogs',
 		name: 'Dialogs',
 		component: Dialogs
+	},
+	{
+		path: '/containers',
+		name: 'Containers',
+		component: Containers
 	}
 	]
 });

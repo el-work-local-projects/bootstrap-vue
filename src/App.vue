@@ -34,7 +34,8 @@ export default {
 			'time-selection',
 			'progress',
 			'list-groups',
-			'dialogs'
+			'dialogs',
+			'containers'
 		]
 	}
   },
