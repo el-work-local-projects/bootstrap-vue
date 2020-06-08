@@ -39,10 +39,12 @@ export default {
 		]
 	}
   },
-  watch: {
-	mode() {
+  created: function() {
+	this.mode = this.$route.path.substring(1);
+	
+	this.$watch('mode', () => {
 		this.$router.push(this.mode);
-	}
+	});
   },
   components: {
     NavBar,
